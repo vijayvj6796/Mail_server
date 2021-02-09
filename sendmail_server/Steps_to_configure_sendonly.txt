@@ -28,9 +28,10 @@ Step6: Got to /etc/mail and open sendmail.mc
 	define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
 	FEATURE(`authinfo',`hash -o /etc/mail/authinfo/gmail.db')dnl
 
-/etc/hosts 
+vi /etc/hosts 
 
-127.0.1.1   myhost.mydomain.eu myhost.domain2.eu myhost
+127.0.1.1  localhost localhost.localdomain <xxxhostname>
+
 Step7: Now run below two command from /etc/mail
 	make
 	/etc/init.d/sendmail reload
